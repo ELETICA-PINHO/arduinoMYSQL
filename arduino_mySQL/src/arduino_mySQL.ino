@@ -59,7 +59,7 @@ void loop(){
      //clienteArduino.println("GET /arduino1/teste.html HTTP/1.0");
 	 //http://192.168.0.109/Dados_teste/teste.php?s1=20&s2=10&s3=15
 
-    clienteArduino.print("GET /Dados_teste/teste.php");
+    clienteArduino.print("GET /Dados_teste/salvar.php");
 	  clienteArduino.print("?s1=");
 	  clienteArduino.print(sensor1);
 	  clienteArduino.print("&s2=");

@@ -27,6 +27,16 @@ void setup(){
 }
 
 void loop(){
+
+  sensor1 ++;
+	sensor2 ++;
+	sensor3 ++;
+
+
+
+
+
+
   if(clienteArduino.available()){
     char dados_Return = clienteArduino.read();
     Serial.print(dados_Return);
@@ -40,12 +50,13 @@ void loop(){
   char comando = Serial.read();
 
 
-  if(comando == '1') {
-	  sensor1 ++;
-	  sensor2 ++;
-	  sensor3 ++;
+  delay(500000);
 
-      Serial.println("conectando ao Servidor e enviado os dados: ");
+
+
+	  
+
+    Serial.println("conectando ao Servidor e enviado os dados: ");
 	  Serial.print("Sensor1: ");
 	  Serial.println(sensor1);
 	  Serial.print("Sensor2: ");
@@ -76,7 +87,7 @@ void loop(){
     }else{
       Serial.println("Falha na conexão com servidor");
     }
-  }
+  
   
 }
 ////////////////////////
